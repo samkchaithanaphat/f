@@ -1,0 +1,170 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kaito HUB", "DarkTheme")
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Farm")
+local Section = Tab:NewSection("Kill boss")
+
+Section:NewToggle("Kill MON", "ToggleInfo", function(state)
+    if state then
+        _G.SeaFarm = true --false,true
+
+while _G.SeaFarm == true do
+    if not game:GetService("Workspace").Monster:FindFirstChild("SeaBeast") then
+        if game.Players.LocalPlayer.Backpack:FindFirstChild("SeaBeast Orb") then
+            game.Players.LocalPlayer.Backpack:FindFirstChild("SeaBeast Orb").Parent = game.Players.LocalPlayer.Character
+            firetouchinterest(game.Players.LocalPlayer.Character:FindFirstChild("SeaBeast Orb").Handle,game:GetService("Workspace").Map.Islands["SeaBeast Island"].Base.Model.PlaceToPutOrb,0)
+        else
+            if game.Workspace.Monster:FindFirstChild("SeaSoldier") then
+                local args = {
+                    [1] = "TakeDamage",
+                    [2] = {
+                        ["target"] = workspace.Monster.SeaSoldier,
+                        ["damage"] = 40000,
+                    },
+                }
+                game:GetService("ReplicatedStorage").Remotes.DamageRemoteEvent:FireServer(unpack(args))
+            else
+                game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(Vector3.new(-3188, -12.4886, 753.432)))
+            end
+        end
+    else
+        local args = {
+                    [1] = "TakeDamage",
+                    [2] = {
+                        ["target"] = workspace.Monster.SeaSoldier,
+                        ["damage"] = 40000,
+                    },
+                }
+                game:GetService("ReplicatedStorage").Remotes.DamageRemoteEvent:FireServer(unpack(args))
+    end
+    wait()
+end
+    else
+        _G.SeaFarm = false --false,true
+
+while _G.SeaFarm == true do
+    if not game:GetService("Workspace").Monster:FindFirstChild("SeaBeast") then
+        if game.Players.LocalPlayer.Backpack:FindFirstChild("SeaBeast Orb") then
+            game.Players.LocalPlayer.Backpack:FindFirstChild("SeaBeast Orb").Parent = game.Players.LocalPlayer.Character
+            firetouchinterest(game.Players.LocalPlayer.Character:FindFirstChild("SeaBeast Orb").Handle,game:GetService("Workspace").Map.Islands["SeaBeast Island"].Base.Model.PlaceToPutOrb,0)
+        else
+            if game.Workspace.Monster:FindFirstChild("SeaSoldier") then
+                local args = {
+                    [1] = "TakeDamage",
+                    [2] = {
+                        ["target"] = workspace.Monster.SeaSoldier,
+                        ["damage"] = 40000,
+                    },
+                }
+                game:GetService("ReplicatedStorage").Remotes.DamageRemoteEvent:FireServer(unpack(args))
+            else
+                game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(Vector3.new(-3188, -12.4886, 753.432)))
+            end
+        end
+    else
+        local args = {
+                    [1] = "TakeDamage",
+                    [2] = {
+                        ["target"] = workspace.Monster.SeaSoldier,
+                        ["damage"] = 40000,
+                    },
+                }
+                game:GetService("ReplicatedStorage").Remotes.DamageRemoteEvent:FireServer(unpack(args))
+    end
+    wait()
+end
+    end
+end)
+
+
+Section:NewToggle("TpBoss", "ToggleInfo", function(state)
+    if state then
+        _G.w = true --false,true
+        while _G.w do wait(0.1)
+        game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(Vector3.new(-3025.41699, 43.1754684, 1072.8385, -0.928443074, 7.97152033e-09, 0.371474773, 1.23834862e-08, 1, 9.49146806e-09, -0.371474773, 1.341244e-08, -0.928443074)))
+end
+    else
+        _G.w = false --false,true
+        while _G.w do wait(0.1)
+        game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(Vector3.new(-3025.41699, 43.1754684, 1072.8385, -0.928443074, 7.97152033e-09, 0.371474773, 1.23834862e-08, 1, 9.49146806e-09, -0.371474773, 1.341244e-08, -0.928443074)))
+end
+    end
+end)
+
+
+Section:NewToggle("Kill boss", "ToggleInfo", function(state)
+    if state then
+        _G.SeaFarm = true --false,true
+
+while _G.SeaFarm == true do
+    if not game:GetService("Workspace").Monster:FindFirstChild("SeaBeast") then
+        if game.Players.LocalPlayer.Backpack:FindFirstChild("SeaBeast Orb") then
+            game.Players.LocalPlayer.Backpack:FindFirstChild("SeaBeast Orb").Parent = game.Players.LocalPlayer.Character
+            firetouchinterest(game.Players.LocalPlayer.Character:FindFirstChild("SeaBeast Orb").Handle,game:GetService("Workspace").Map.Islands["SeaBeast Island"].Base.Model.PlaceToPutOrb,0)
+        else
+            if game.Workspace.Monster:FindFirstChild("SeaBeast") then
+                local args = {
+                    [1] = "TakeDamage",
+                    [2] = {
+                        ["target"] = workspace.Monster.SeaBeast,
+                        ["damage"] = 40000,
+                    },
+                }
+                game:GetService("ReplicatedStorage").Remotes.DamageRemoteEvent:FireServer(unpack(args))
+            else
+                game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(Vector3.new(-3420.4375, -11.9238415, 920.631104, 0.785395026, 0.000170922402, -0.618994892, 0.000380400073, 0.999999642, 0.000758789422, 0.618994772, -0.00083141512, 0.785394669)))
+            end
+        end
+    else
+        local args = {
+                    [1] = "TakeDamage",
+                    [2] = {
+                        ["target"] = workspace.Monster.SeaBeast,
+                        ["damage"] = 40000,
+                    },
+                }
+                game:GetService("ReplicatedStorage").Remotes.DamageRemoteEvent:FireServer(unpack(args))
+    end
+    wait()
+end
+    else
+        _G.SeaFarm = false --false,true
+
+while _G.SeaFarm == true do
+    if not game:GetService("Workspace").Monster:FindFirstChild("SeaBeast") then
+        if game.Players.LocalPlayer.Backpack:FindFirstChild("SeaBeast Orb") then
+            game.Players.LocalPlayer.Backpack:FindFirstChild("SeaBeast Orb").Parent = game.Players.LocalPlayer.Character
+            firetouchinterest(game.Players.LocalPlayer.Character:FindFirstChild("SeaBeast Orb").Handle,game:GetService("Workspace").Map.Islands["SeaBeast Island"].Base.Model.PlaceToPutOrb,0)
+        else
+            if game.Workspace.Monster:FindFirstChild("SeaBeast") then
+                local args = {
+                    [1] = "TakeDamage",
+                    [2] = {
+                        ["target"] = workspace.Monster.SeaBeast,
+                        ["damage"] = 40000,
+                    },
+                }
+                game:GetService("ReplicatedStorage").Remotes.DamageRemoteEvent:FireServer(unpack(args))
+            else
+                game.Players.LocalPlayer.Character:SetPrimaryPartCFrame(CFrame.new(Vector3.new(-3420.4375, -11.9238415, 920.631104, 0.785395026, 0.000170922402, -0.618994892, 0.000380400073, 0.999999642, 0.000758789422, 0.618994772, -0.00083141512, 0.785394669)))
+            end
+        end
+    else
+        local args = {
+                    [1] = "TakeDamage",
+                    [2] = {
+                        ["target"] = workspace.Monster.SeaBeast,
+                        ["damage"] = 40000,
+                    },
+                }
+                game:GetService("ReplicatedStorage").Remotes.DamageRemoteEvent:FireServer(unpack(args))
+    end
+    wait()
+end
+    end
+end)
+
+
+Section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.F, function()
+	print("You just clicked the bind")
+end)
