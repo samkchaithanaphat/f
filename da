@@ -1,0 +1,22 @@
+local oldindex;
+local oldnamecall;
+local mod = require(game:GetService("ReplicatedStorage").Modules.Global["Random_Clan_Picker"])
+ 
+oldindex = hookmetamethod(game, "__index", function(i, v)
+    if tostring(i) == "Spins" then
+        i.Value = 9e9
+    end
+ 
+    return oldindex(i, v)
+end)
+ 
+oldnamecall = hookmetamethod(game, "__namecall", function(self, ...)
+    local args = { ... }
+    local method = getnamecallmethod()
+ 
+    if method == "InvokeServer" and self.Name == "Handle_Initiate_S_" and args[1] == "check_can_spin" then
+        return true, mod.pick()
+    end
+ 
+    return oldnamecall(self, ...)
+end)
